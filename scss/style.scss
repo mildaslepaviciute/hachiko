@@ -42,7 +42,7 @@ h2 {
     font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-size: 4.36rem;
+    font-size: 3.5rem;
 }
 
 .font-poppins {
@@ -65,27 +65,31 @@ h2 {
     font-weight: 700;
 }
 
-.fs-1 {
-    font-size: 4.36rem;
+.font-size-1 {
+    font-size: 3.5rem;
 }
 
-.fs-2 {
+.font-size-2 {
     font-size: 2.29rem;
 }
 
-.fs-3 {
+.font-size-3 {
     font-size: 2rem;
 }
 
-.fs-4 {
+.font-size-4 {
     font-size: 1.6rem;
 }
 
-.fs-5 {
+.font-size-5 {
     font-size: 1.4rem;
 }
 
-.fs-regular {
+.font-size-6 {
+    font-size: 0.86rem;
+}
+
+.font-size-regular {
     font-size: 1rem;
 }
 
@@ -182,23 +186,24 @@ h2 {
     opacity: 0.7;
     text-decoration: underline;
     text-underline-offset: 10px;
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 1px;
     text-decoration-color: transparent;
-    transition-duration: 0.25s;
+    transition: ease 0.3s;
 }
 
 .nav-link:hover {
     color: $green;
     text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1px;
     text-decoration-color: unset;
-    transition-duration: 0.25s;
+    transition: ease 0.3s;
 }
 
 
 /* ------- HEADER -------- */
 
 header {
-    // background-image: url(../img/illustrations/happy-doggo.svg);
     min-height: calc(100vh - 144px);
     background-repeat: no-repeat;
     background-size: cover;
@@ -206,7 +211,10 @@ header {
 }
 
 .header-image {
-    width: 75%; height: 85vh; object-fit: contain; object-position: right bottom;
+    width: 75%;
+    height: 85vh;
+    object-fit: contain;
+    object-position: right bottom;
 }
 
 
@@ -219,6 +227,12 @@ header {
     min-width: 150px;
     padding: 10px 30px;
     font-size: 1.4rem;
+}
+
+.btn.bg-green:hover {
+    color: $purple;
+    background-color: white;
+    transition-duration: 0.3s;
 }
 
 .button-style-none {
@@ -245,11 +259,6 @@ button:focus {
 
 /* ------- POSITIONING -------- */
 
-.my-sec {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-}
-
 .py-sec {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -259,8 +268,8 @@ button:focus {
     margin-bottom: 3rem;
 }
 
-.end-8 {
-    right: 8%;
+.end-6 {
+    right: 6%;
 }
 
 .op-07 {
@@ -287,6 +296,8 @@ button:focus {
 
 .link-u {
     text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
     text-decoration-color: transparent;
     transition-duration: 0.25s;
 }
@@ -294,6 +305,8 @@ button:focus {
 .link-u:hover {
     color: inherit;
     text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
     text-decoration-color: unset;
     transition-duration: 0.25s;
 }
@@ -311,8 +324,38 @@ a:hover {
 /* ------- OTHER -------- */
 
 .social-link {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    transition: ease 0.3s;
+}
+
+.social-link:hover {
+    background-color: white;
+    transition: ease 0.3s;
+    path {
+        fill: $purple;
+        transition: ease 0.3s;
+    }
+}
+
+.service-card {
+    background-color: $purple;
+    transition: ease 0.3s;
+}
+
+.service-card img {
+    height: 80px;
+    transition: ease 0.3s;
+}
+
+.service-card:hover {
+    background-color: rgb(56, 59, 152);
+    transition: ease 0.3s;
+    img {
+        transform: scale(1.05);
+        transition: ease 0.4s;
+    }
 }
 
 
@@ -324,23 +367,23 @@ a:hover {
         font-size: 2.5rem;
         opacity: 1;
     }
+
+    .header-image {
+        width: 85%;
+        height: 65vh;
+    }
 }
 
 // Small devices
 @media (min-width: 576px) {}
 
 // Medium devices
-@media (min-width: 768px) {
-    
-    .w-md-50 {
-        width: 50%;
-    }
-}
+@media (min-width: 768px) {}
 
 // Large devices
 @media (min-width: 992px) {
     .container {
-        width: 78%;
+        width: 85%;
     }
 
     .position-lg-absolute {
@@ -358,15 +401,6 @@ a:hover {
     .w-lg-50 {
         width: 50%;
     }
-
-    .w-lg-75 {
-        width: 75%;
-    }
-
-    .my-sec {
-        margin-top: 9rem;
-        margin-bottom: 9rem;
-    }
     
     .py-sec {
         padding-top: 9rem;
@@ -376,11 +410,21 @@ a:hover {
     .mb-title {
         margin-bottom: 4rem;
     }
+
+    .service-card img {
+        height: 120px;
+    }
+
+    h1,
+    h2,
+    .font-size-1 {
+        font-size: 4.36rem;
+    }
 }
 
 // Extra large devices
 @media (min-width: 1600px) {
     .container {
-        width: 70%;
+        width: 78%;
     }
 }
