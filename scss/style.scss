@@ -1,12 +1,12 @@
 /* ------- VARIABLES -------- */
 
-$primary:  #000000;
-
-@font-face {
-    font-family: '';
-    src: url(../);
-}
-
+$purple: #4245AC;
+$green: #00F1C2;
+$grey: #EBF7FF;
+$purple-2: #5660D8;
+$green-2: #61D7DA;
+$purple-3: #9769F5;
+$orange: #F7BC7C;
 
 /* ------- MAIN INFO -------- */
 
@@ -17,78 +17,196 @@ $primary:  #000000;
 }
 
 html {
-    font-family: "Poppins";
-    font-weight: 300;
-    color: #333;
-    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: $purple;
+    font-size: 15px;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    font-style: normal;
 }
 
 body {
-    font-family: "Poppins";
-    font-weight: 300;
-    color: #333;
-    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: $purple;
+    font-size: 15px;
+    font-style: normal;
 }
 
 
 /* ------- TITLES, TEXTS -------- */
 
-.fw-600 {
-    font-weight: 600;
+h1,
+h2 {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 4.36rem;
 }
 
-.fw-200 {
-    font-weight: 200;
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-sora {
+    font-family: "Sora", sans-serif;
+}
+
+.fw-regular {
+    font-weight: 400;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fs-1 {
+    font-size: 4.36rem;
+}
+
+.fs-2 {
+    font-size: 2.29rem;
+}
+
+.fs-3 {
+    font-size: 2rem;
+}
+
+.fs-4 {
+    font-size: 1.6rem;
+}
+
+.fs-5 {
+    font-size: 1.4rem;
+}
+
+.fs-regular {
+    font-size: 1rem;
 }
 
 .text-black {
     color: black;
 }
 
+.text-purple {
+    color: $purple;
+}
+
+.text-green {
+    color: $green;
+}
+
+.text-grey {
+    color: $grey;
+}
+
+.text-purple-2 {
+    color: $purple-2;
+}
+
+.text-green-2 {
+    color: $green-2;
+}
+
+.text-purple-3 {
+    color: $purple-3;
+}
+
+.text-orange {
+    color: $orange;
+}
+
 
 /* ------- BACKGROUNDS -------- */
-
-.bg-neat {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 .bg-white {
     background-color: white;
 }
-  
-.bg-black {
-    background-color: black;
+
+.bg-purple {
+    background-color: $purple;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-grey {
+    background-color: $grey;
+}
+
+.bg-purple-2 {
+    background-color: $purple-2;
+}
+
+.bg-green-2 {
+    background-color: $green-2;
+}
+
+.bg-purple-3 {
+    background-color: $purple-3;
+}
+
+.bg-orange {
+    background-color: $orange;
 }
 
 
 /* -----  BORDERS, SHADOWS AND OTHER  ----- */
 
-.hr-small {
-    border: 0px;
-    border-top: 2px solid black;
-    width: 100px;
+.border-purple {
+    border-color: $purple !important;
 }
 
 
 /* ------- NAVBAR -------- */
   
 .navbar-brand img {
-    width: 100px;
+    width: 190px;
+}
+
+.nav-item {
+    margin-right: 40px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1.14rem;
+    font-family: "Sora", sans-serif;
+    font-weight: 400;
+    opacity: 0.7;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: transparent;
+    transition-duration: 0.25s;
+}
+
+.nav-link:hover {
+    color: $green;
+    text-decoration: underline;
+    text-decoration-color: unset;
+    transition-duration: 0.25s;
 }
 
 
 /* ------- HEADER -------- */
 
 header {
-    background: url(../img/hero-img.jpg);
-    background-position: center;
+    // background-image: url(../img/illustrations/happy-doggo.svg);
+    min-height: calc(100vh - 144px);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh; 
+    background-position: center bottom;
+}
+
+.header-image {
+    width: 75%; height: 85vh; object-fit: contain; object-position: right bottom;
 }
 
 
@@ -99,6 +217,8 @@ header {
 
 .btn {
     min-width: 150px;
+    padding: 10px 30px;
+    font-size: 1.4rem;
 }
 
 .button-style-none {
@@ -123,35 +243,28 @@ button:focus {
 }
 
 
-/* ------- FORMS -------- */
-
-::placeholder {
-    color: black !important;
-}
-  
-:-ms-input-placeholder {
-    color: black !important;
-}
-  
-::-ms-input-placeholder {
-    color: black !important;
-}
-
 /* ------- POSITIONING -------- */
 
-.anchor {
-    padding-top: 100px;
-    margin-top: -100px;
-}
-
 .my-sec {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 .py-sec {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.mb-title {
+    margin-bottom: 3rem;
+}
+
+.end-8 {
+    right: 8%;
+}
+
+.op-07 {
+    opacity: 0.7;
 }
 
 .z-1 {
@@ -165,11 +278,24 @@ button:focus {
 
 /* ------- ACTIONS -------- */
 
-.hover-primary {
+.hover-x {
     color: #212529;
     &:hover {
-        color: $primary;
+        color: #000;
     }
+}
+
+.link-u {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition-duration: 0.25s;
+}
+
+.link-u:hover {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: unset;
+    transition-duration: 0.25s;
 }
 
 .pointer {
@@ -182,13 +308,30 @@ a:hover {
 }
 
 
+/* ------- OTHER -------- */
+
+.social-link {
+    width: 45px;
+    height: 45px;
+}
+
+
 /* ------- QUERIES -------- */
+
+// Small devices
+@media (max-width: 991px) {
+    .nav-link {
+        font-size: 2.5rem;
+        opacity: 1;
+    }
+}
 
 // Small devices
 @media (min-width: 576px) {}
 
 // Medium devices
 @media (min-width: 768px) {
+    
     .w-md-50 {
         width: 50%;
     }
@@ -204,6 +347,14 @@ a:hover {
         position: absolute;
     }
 
+    .navbar-collapse {
+        border: 0 !important;
+    }
+
+    header {
+        min-height: 100vh;
+    }
+
     .w-lg-50 {
         width: 50%;
     }
@@ -213,13 +364,17 @@ a:hover {
     }
 
     .my-sec {
-        margin-top: 90px;
-        margin-bottom: 90px;
+        margin-top: 9rem;
+        margin-bottom: 9rem;
     }
     
     .py-sec {
-        padding-top: 90px;
-        padding-bottom: 90px;
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+
+    .mb-title {
+        margin-bottom: 4rem;
     }
 }
 

@@ -14,13 +14,13 @@
         
         <!-- LINKS AND SCRIPTS -->
 
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="scss/bootstrap.css">
+        <link rel="stylesheet" href="scss/style.css">
         <link rel="image_src" href="img/link_img.jpg">
 
         <!-- FAVICON -->
@@ -29,7 +29,7 @@
 
         <!-- TITLE -->
 
-        <title>Title</title>
+        <title>Hačiko</title>
 
     </head>
 
@@ -37,77 +37,340 @@
 
         <!-- NAVBAR -->
 
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg position-lg-absolute bg-purple w-100 pt-4 z-1">
             <div class="container">
-                <a href="index.html" class="navbar-brand">Brand</a>
-                <button type="button" class="navbar-toggler button-style-none ms-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fas fa-bars"></i>
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo/logo.svg" alt="">
+                </a>
+                <button type="button" class="navbar-toggler button-style-none ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <img src="img/illustrations/menu.svg" width="40" alt="">
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse border-top border-bottom border-2 py-3 py-lg-0 mt-3 mt-lg-0" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="#paslaugos" class="nav-link">Paslaugos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">About us</a>
+                            <a href="#kontaktai" class="nav-link">Kontaktai</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contacts</a>
+                            <a href="#komanda" class="nav-link">Komanda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#apie-mus" class="nav-link">Apie mus</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="modal fade p-0" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen me-0">
-                <div class="modal-content">
-                    <div class="modal-header border-0 p-0">
-                        <div class="container d-flex mt-5 mb-2 pe-4">
-                            <button type="button" class="ms-auto button-style-none" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="fas fa-times"></i>
+        <!-- <div class="modal fade p-0" id="navModal" tabindex="-1" aria-labelledby="navModal" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body bg-purple-2 p-0">
+                        <div class="position-absolute end-0 p-3">
+                            <button type="button" class="button-style-none p-1" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="img/illustrations/x.svg" alt="" width="25">
                             </button>
                         </div>
+                        <div class="d-flex flex-wrap align-items-start p-4 pe-5 mt-4">
+                            <a href="#paslaugos" class="fs-2 fw-medium text-grey px-3 py-1 my-2 me-2">Paslaugos</a>
+                            <a href="#kontaktai" class="fs-2 fw-medium text-grey px-3 py-1 my-2 me-2">Kontaktai</a>
+                            <a href="#komanda" class="fs-2 fw-medium text-grey px-3 py-1 my-2 me-2">Komanda</a>
+                            <a href="#apie-mus" class="fs-2 fw-medium text-grey px-3 py-1 my-2 me-2">Apie mus</a>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="container mt-lg-5">
-                            <div class="d-flex flex-column">
-                                <div class="mb-3">
-                                    <a href="#">Home</a>
-                                </div>
-                                <div class="mb-3">
-                                    <a href="#">Home</a>
-                                </div>
-                                <div class="mb-3">
-                                    <a href="#">Home</a>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- HEADER -->
+
+        <header class="d-flex align-items-center position-relative bg-purple text-white">
+            <div class="position-absolute h-100 w-100 d-flex align-items-end justify-content-end end-8">
+                <img src="img/illustrations/hero-img.svg" alt="" class="header-image">
+            </div>
+            <div class="container position-relative z-2 py-sec">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-lg-4">
+                        <h1 class="mb-4">Draugai nuo pirmo vizito</h1>
+                        <p class="fs-4 op-07 mb-4">Naujoji gyvūnų klinika duris atveria nuo birželio 30 d.</p>
+                        <a href="#" class="btn bg-green text-purple rounded-pill">Sužinoti kur</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECTIONS -->
+
+        <section id="paslaugos" class="py-sec">
+            <div class="container">
+                <h2 class="text-center mb-title">Paslaugos</h2>
+                <div class="row justify-content-center g-2">
+                    <div class="col-lg-5">
+                        <div class="d-flex align-items-center bg-purple rounded-4 pointer p-4" data-bs-toggle="modal" data-bs-target="#serviceModal1">
+                            <img src="img/illustrations/profilaktika.svg" height="100" alt="" class="me-4">
+                            <h3 class="font-sora fw-bold fs-2 text-white mb-0">Profilaktika</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex align-items-center bg-purple rounded-4 pointer p-4" data-bs-toggle="modal" data-bs-target="#serviceModal2">
+                            <img src="img/illustrations/gydymas.svg" height="100" alt="" class="me-4">
+                            <h3 class="font-sora fw-bold fs-2 text-white mb-0">Gydymas</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex align-items-center bg-purple rounded-4 pointer p-4" data-bs-toggle="modal" data-bs-target="#serviceModal3">
+                            <img src="img/illustrations/chirurgija.svg" height="100" alt="" class="me-4">
+                            <h3 class="font-sora fw-bold fs-2 text-white mb-0">Chirurgija</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex align-items-center bg-purple rounded-4 pointer p-4" data-bs-toggle="modal" data-bs-target="#serviceModal4">
+                            <img src="img/illustrations/kitos-paslaugos.svg" height="100" alt="" class="me-4">
+                            <h3 class="font-sora fw-bold fs-2 text-white mb-0">Kitos paslaugos</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content rounded-5">
+                    <div class="modal-body p-0">
+                        <div class="position-absolute end-0 p-3">
+                            <button type="button" class="button-style-none p-1" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="img/illustrations/x.svg" alt="" width="25">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-start p-4 pe-5">
+                            <div class="border border-2 border-purple rounded-pill fs-5 fw-medium text-purple px-3 py-1 my-2 me-2">Profilaktinė apžiūra</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 fw-medium text-purple px-3 py-1 my-2 me-2">Gyvūnų apsauga nuo parazitų</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 fw-medium text-purple px-3 py-1 my-2 me-2">Vakcinacija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 fw-medium text-purple px-3 py-1 my-2 me-2">Nagų kirpimas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 fw-medium text-purple px-3 py-1 my-2 me-2">Ausų valymas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 fw-medium text-purple px-3 py-1 my-2 me-2">Dantų ir dantenų priežiūra</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- HEADER -->
-
-        <header>
-            <div class="h-100 d-flex flex-column align-items-center justify-content-center px-2">
-                <h1 class="text-center" data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="200">Some text</h1>
-                <h4 class="text-center mt-3" data-aos="fade-in" data-aos-easing="ease-in-out" data-aos-delay="300">Some text</h4>
+        <div class="modal fade" id="serviceModal2" tabindex="-1" aria-labelledby="serviceModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content rounded-5">
+                    <div class="modal-body p-0">
+                        <div class="position-absolute end-0 p-3">
+                            <button type="button" class="button-style-none p-1" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="img/illustrations/x.svg" alt="" width="25">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-start p-4 pe-5">
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Pirminė konsultacija ir apžiūra</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Ligų diagnostika</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Virusinių ligų diagnostika greitaisiais testais</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Labaratoriniai tyrimai</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Terapija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Skubi veterinarinė pagalba</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Vidaus ir infekcinių ligų gydymas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Ginekologija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Urologija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Ortopedija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Traumatologija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Odontologija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Dermatologija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Egzotinių gyvūnų gydymas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Stacionaras</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Rentgeneas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Ultragarsas</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </div>
 
-        <!-- SECTIONS -->
+        <div class="modal fade" id="serviceModal3" tabindex="-1" aria-labelledby="serviceModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content rounded-5">
+                    <div class="modal-body p-0">
+                        <div class="position-absolute end-0 p-3">
+                            <button type="button" class="button-style-none p-1" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="img/illustrations/x.svg" alt="" width="25">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-start p-4 pe-5">
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Kastracija, sterilizacija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Stomatologija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Minkštųjų audinių operacijos</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Estetinės operacijos</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Auglių šalinimas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Akušerija</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <section></section>
+        <div class="modal fade" id="serviceModal4" tabindex="-1" aria-labelledby="serviceModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content rounded-5">
+                    <div class="modal-body p-0">
+                        <div class="position-absolute end-0 p-3">
+                            <button type="button" class="button-style-none p-1" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="img/illustrations/x.svg" alt="" width="25">
+                            </button>
+                        </div>
+                        <div class="d-flex flex-wrap align-items-start p-4 pe-5">
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Ženklinimas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Registracija</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">ES paso išdavimas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Pašarai</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Mitybos raciono sudarymas</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Zooprekės</div>
+                            <div class="border border-2 border-purple rounded-pill fs-5 text-purple px-3 py-1 my-2 me-2">Gyvūnų kremavimas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <section></section>
+        <section id="kontaktai" class="bg-green-2 py-sec">
+            <div class="container">
+                <div class="row align-items-center justify-content-between gy-4">
+                    <div class="col-lg-5">
+                        <h2 class="mb-title">Kviečiame apsilankyti</h2>
+                        <p class="fs-4 op-07">Pirma augintinio apžiūra - nemokama iki rugsėjo 30 d.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row gx-5 gy-4">
+                            <div class="col-6">
+                                <h3 class="fs-regular">Adresas</h3>
+                                <p class="op-07">„UNA“ prekybos centras, Dangeručio g. 1, Vilnius, 08410 Vilniaus m. sav.</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="fs-regular">El. paštas</h3>
+                                <p class="op-07"><a href="mailto:info@haciko.lt" class="text-purple link-u">info@haciko.lt</a></p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="fs-regular">Darbo laikas</h3>
+                                <p class="fs-3 op-07">I - VII 10:00 — 21:00</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="fs-regular">Telefonas</h3>
+                                <p class="fs-3 op-07"><a href="tel:+37061232234" class="text-purple link-u">+370 612 32 234</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="komanda" class="py-sec">
+            <div class="container">
+                <h2 class="text-center mb-title">Komanda</h2>
+                <p class="w-lg-50 text-center fs-regular mx-auto">Nuolat tobulėjame dalyvaudami seminaruose, konferencijose ir praktinėse stažuotėse užsienyje. Mūsų specializacijos apima chirurgiją, kardiologiją, stomatologiją, dermatologiją, infekcines ir vidaus ligas bei gyvūnų mitybą.</p>
+                <div class="row gx-5 gy-4 mt-5">
+                    <div class="col-lg-4">
+                        <div class="text-center px-2">
+                            <div class="ratio ratio-1x1 mb-4">
+                                <img src="img/illustrations/person-placeholder.svg" alt="" class="w-100">
+                            </div>
+                            <h3 class="fw-medium fs-4 mb-3">Vardenis Pavardenis</h3>
+                            <p class="op-07">Veterinarijos gydytojas, neurologas, traumatologas-ortopedas, veterinarijos mokslų daktaras.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center px-2">
+                            <div class="ratio ratio-1x1 mb-4">
+                                <img src="img/illustrations/person-placeholder.svg" alt="" class="w-100">
+                            </div>
+                            <h3 class="fw-medium fs-4 mb-3">Vardenis Pavardenis</h3>
+                            <p class="op-07">Veterinarijos gydytojas, neurologas, traumatologas-ortopedas, veterinarijos mokslų daktaras.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="text-center px-2">
+                            <div class="ratio ratio-1x1 mb-4">
+                                <img src="img/illustrations/person-placeholder.svg" alt="" class="w-100">
+                            </div>
+                            <h3 class="fw-medium fs-4 mb-3">Vardenis Pavardenis</h3>
+                            <p class="op-07">Veterinarijos gydytojas, neurologas, traumatologas-ortopedas, veterinarijos mokslų daktaras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apie-mus" class="bg-purple-3 text-white py-sec">
+            <div class="container">
+                <div class="row align-items-center gy-4">
+                    <div class="col-lg-6">
+                        <h2 class="mb-title">Apie gyvūnų kliniką</h2>
+                        <p class="text-grey">
+                            „HAČIKO“ gyvūnų klinika - tavo partneris rūpinantis augintinio sveikata ir gerove. Ypač profesionalių veterinarijos gydytojų komanda pasirūpins kiekvienu mažuoju draugu - siekiame tapti „šeimos gydytoju“ jūsų gyvūnams.
+                            <br><br>
+                            Mūsų atsidavimas gyvūnams remiasi meile, profesionalumu ir sukaupta patirtimi. Rūpinamės tais, kurie mums suteikia tiek daug džiaugsmo ir laimės. Bendradarbiaujame su gyvūnų prieglaudomis, siekdami padėti labiausiai nuskriaustiems gyvūnams.
+                            <br>
+                            „HAČIKO“ gyvūnų klinika ypatingą dėmesį skiria ne tik augintiniams, bet ir jų šeimininkams. Veterinarijos gydytojai visada pasiruošę išklausyti ir suteikti išsamią informaciją apie gyvūno sveikatą bei priežiūrą. Suprantame, kaip svarbu yra palaikyti atvirą ir nuoširdų ryšį su gyvūnų savininkais, todėl stengiamės suteikti kuo daugiau naudingos informacijos bei patarimų, kad gyvūno priežiūra būtų kuo paprastesnė ir efektyvesnė. 
+                            <br><br>
+                            Mūsų tikslas - sukurti pasitikėjimo kupiną aplinką, kurioje šeimininkai jaustųsi užtikrinti dėl savo augintinių gerovės.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/illustrations/dogs.png" alt="" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- FOOTER -->
 
-        <footer class="bg-light py-4">
-            <div class="d-flex justify-content-center align-items-center">
-                <p class="mb-0">© <span id="year"></span> Title</p>
+        <footer class="bg-purple text-grey py-sec">
+            <div class="container">
+                <div class="row gx-5 gy-5">
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-end">
+                            <div class="pe-xl-5">
+                                <img src="img/logo/logo-white.svg" alt="" class="mb-3">
+                                <p class="mb-4 mb-lg-5">© 2024 — UAB „Lazdynėlių veterinarijos klinika“</p>
+                                <h3>Sekite mus</h3>
+                                <div class="d-flex">
+                                    <div class="social-link d-flex align-items-center justify-content-center rounded-circle border border-white me-2">
+                                        <img src="img/illustrations/facebook.svg" alt="">
+                                    </div>
+                                    <div class="social-link d-flex align-items-center justify-content-center rounded-circle border border-white me-2">
+                                        <img src="img/illustrations/instagram.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="img/illustrations/dog.svg" alt="" class="d-none d-lg-block w-50 me-4">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-4">
+                            <h3 class="fs-regular">Telefonas</h3>
+                            <p class="fs-3"><a href="tel:+37061232234" class="text-grey link-u">+370 612 32 234</a></p>
+                        </div>
+                        <div class="d-flex flex-column flex-lg-row mb-4">
+                            <div class="me-lg-4 mb-4 mb-lg-0">
+                                <h3 class="fs-regular">Adresas</h3>
+                                <p class="op-07">„UNA“ prekybos centras, Dangeručio g. 1, Vilnius, 08410 Vilniaus m. sav.</p>
+                            </div>
+                            <div>
+                                <h3 class="fs-regular">El. paštas</h3>
+                                <p class="op-07"><a href="mailto:info@haciko.lt" class="text-grey link-u">info@haciko.lt</a></p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="fs-regular">Darbo laikas</h3>
+                            <p class="fs-3">I - VII 10:00 — 21:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img src="img/illustrations/dog.svg" alt="" class="d-lg-none w-75 mx-auto mt-4">
+                </div>
             </div>
         </footer>
 
@@ -115,15 +378,10 @@
 
         <!-- SCRIPTS -->
 
-        <script src="https://kit.fontawesome.com/e3336da53c.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/swiper.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
