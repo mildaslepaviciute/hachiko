@@ -338,6 +338,9 @@ a:hover {
     width: 85%;
     height: 65vh;
   }
+  .pt-3-mob {
+    padding-top: 2rem !important;
+  }
 }
 @media (min-width: 992px) {
   .container {
