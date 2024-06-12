@@ -42,7 +42,7 @@ h2 {
     font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .font-poppins {
@@ -66,15 +66,15 @@ h2 {
 }
 
 .font-size-1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .font-size-2 {
-    font-size: 2.29rem;
+    font-size: 2rem;
 }
 
 .font-size-3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .font-size-4 {
@@ -171,7 +171,7 @@ h2 {
 /* ------- NAVBAR -------- */
   
 .navbar-brand img {
-    width: 190px;
+    width: 160px;
 }
 
 .nav-item {
@@ -259,6 +259,11 @@ button:focus {
 
 /* ------- POSITIONING -------- */
 
+#komanda,
+footer {
+    overflow-x: hidden !important;
+}
+
 .py-sec {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -345,7 +350,7 @@ a:hover {
 }
 
 .service-card img {
-    height: 80px;
+    height: 70px;
     transition: ease 0.3s;
 }
 
@@ -375,6 +380,14 @@ a:hover {
 
     .pt-3-mob {
         padding-top: 2rem !important;
+    }
+
+    .font-size-5-mob {
+        font-size: 1.1rem;
+    }
+
+    .border-0-mob {
+        border: none !important;
     }
 }
 
@@ -416,7 +429,31 @@ a:hover {
     }
 
     .service-card img {
-        height: 120px;
+        height: 80px;
+    }
+
+    h1,
+    h2,
+    .font-size-1 {
+        font-size: 4rem;
+    }
+
+    .font-size-2 {
+        font-size: 2rem;
+    }
+    
+    .font-size-3 {
+        font-size: 1.9rem;
+    }
+
+    .navbar-brand img {
+        width: 190px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .service-card img {
+        height: 100px;
     }
 
     h1,
@@ -424,11 +461,23 @@ a:hover {
     .font-size-1 {
         font-size: 4.36rem;
     }
+
+    .font-size-2 {
+        font-size: 2.29rem;
+    }
+    
+    .font-size-3 {
+        font-size: 2rem;
+    }
 }
 
 // Extra large devices
 @media (min-width: 1600px) {
     .container {
         width: 78%;
+    }
+
+    .service-card img {
+        height: 120px;
     }
 }
