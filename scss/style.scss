@@ -211,8 +211,8 @@ header {
 }
 
 .header-image {
-    width: 75%;
-    height: 85vh;
+    width: 85%;
+    height: 65vh;
     object-fit: contain;
     object-position: right bottom;
 }
@@ -373,11 +373,6 @@ a:hover {
         opacity: 1;
     }
 
-    .header-image {
-        width: 85%;
-        height: 65vh;
-    }
-
     .pt-3-mob {
         padding-top: 2rem !important;
     }
@@ -449,6 +444,12 @@ a:hover {
     .navbar-brand img {
         width: 190px;
     }
+
+    .header-image {
+        width: 75%;
+        // height: 85vh;
+        height: calc(100vh - 130px);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -469,7 +470,7 @@ a:hover {
     .font-size-3 {
         font-size: 2rem;
     }
-    
+
     .font-size-4 {
         font-size: 1.6rem;
     }
