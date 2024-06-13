@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="scss/bootstrap.css">
         <link rel="stylesheet" href="scss/style.css">
         <link rel="image_src" href="img/link_img.jpg">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5naUDzZ-TJBRNZ5ci0q8zbdGHOUuhfFE"></script>
+
 
         <!-- FAVICON -->
 
@@ -263,6 +265,15 @@
                 </div>
             </div>
         </section>
+
+
+        <gmp-map center="54.779136657714844,25.27623748779297" zoom="14" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="54.779136657714844,25.27623748779297" title="My location"></gmp-advanced-marker>
+        </gmp-map>
+
+        <div id="map" style="height: 500px; width: 100%;"></div>
+
+
 
         <section id="komanda" class="py-sec">
             <div class="container">
