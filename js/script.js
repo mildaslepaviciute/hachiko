@@ -90,8 +90,17 @@ function initMap() {
               title: address
           });
 
+          var infowindowContent = `
+            <div>
+                <h3>Hačiko gyvūnų klinika</h3>
+                <h6>„UNA“ prekybos centras</h6>
+                <p>Dangeručio g. 1, Vilnius, 08410 Vilniaus m. sav.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=${results[0].geometry.location.lat()},${results[0].geometry.location.lng()}" target="_blank">Peržiūrėti Google MAPS</a>
+            </div>
+          `;
+
           var infowindow = new google.maps.InfoWindow({
-              content: '<h3>„UNA“ prekybos centras</h3><p>Dangeručio g. 1, Vilnius, 08410 Vilniaus m. sav.</p>'
+              content: infowindowContent
           });
 
           marker.addListener('click', function() {
