@@ -93,6 +93,10 @@ h2 {
     font-size: 1rem;
 }
 
+.font-size-regular-lg {
+    font-size: 1.14rem;
+}
+
 .text-black {
     color: black;
 }
@@ -269,6 +273,14 @@ footer {
     padding-bottom: 6rem;
 }
 
+.pt-sec {
+    padding-top: 6rem;
+}
+
+.pb-sec {
+    padding-bottom: 6rem;
+}
+
 .mb-title {
     margin-bottom: 3rem;
 }
@@ -277,8 +289,8 @@ footer {
     right: 6%;
 }
 
-.op-07 {
-    opacity: 0.7;
+.op-08 {
+    opacity: 0.8;
 }
 
 .z-1 {
@@ -413,9 +425,21 @@ a:hover {
     .w-lg-50 {
         width: 50%;
     }
+
+    .w-lg-75 {
+        width: 75%;
+    }
     
     .py-sec {
         padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+
+    .pt-sec {
+        padding-top: 9rem;
+    }
+
+    .pb-sec {
         padding-bottom: 9rem;
     }
 
@@ -442,7 +466,7 @@ a:hover {
     }
 
     .navbar-brand img {
-        width: 190px;
+        width: 250px;
     }
 
     .header-image {
