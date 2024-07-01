@@ -411,8 +411,8 @@ a:hover {
     width: 250px;
   }
   .header-image {
-    width: 75%;
-    height: calc(100vh - 167px);
+    width: 70%;
+    height: calc(100vh - 180px);
   }
 }
 @media (min-width: 1200px) {
@@ -434,18 +434,6 @@ a:hover {
     font-size: 1.6rem;
   }
 }
-
-@media (max-width: 380px) {
-
-  .service-card img {
-    height: 60px;
-  }
-
-  .font-size-2 {
-    font-size: 1.8rem;
-  }
-}
-
 @media (min-width: 1600px) {
   .container {
     width: 78%;
