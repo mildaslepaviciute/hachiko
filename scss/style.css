@@ -196,7 +196,7 @@ header {
 
 .header-image {
   width: 85%;
-  height: 65vh;
+  height: 65%;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: right bottom;
@@ -412,7 +412,7 @@ a:hover {
   }
   .header-image {
     width: 75%;
-    height: calc(100vh - 180px);
+    height: calc(100% - 168px);
   }
 }
 @media (min-width: 1200px) {
