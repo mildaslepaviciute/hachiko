@@ -411,7 +411,7 @@ a:hover {
     width: 250px;
   }
   .header-image {
-    width: 70%;
+    width: 75%;
     height: calc(100vh - 180px);
   }
 }
